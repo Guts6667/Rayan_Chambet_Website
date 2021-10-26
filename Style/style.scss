@@ -1,3 +1,158 @@
 $primary: #191B1A;
 $secondary: #E0E7DF;
-$tertiary: #62825D;
+
+@font-face {
+    font-family: "Montserrat-SemiBold", "Montserrat-Medium", "OpenSans";
+    src: url("../Fonts/Montserrat/Montserrat-SemiBold.ttf"),
+        url("../Fonts/Montserrat/Montserrat-Medium.ttf"),
+        url("../Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf")
+}
+
+body {
+    background-color: $primary;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    color: $secondary;
+}
+
+.pBold {
+    font-weight: bold;
+}
+
+p {
+    font-family: "OpenSans";
+    font-size: 20px;
+}
+
+h2 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 36px;
+}
+
+h3 {
+    font-family: "OpenSans";
+    font-weight: bold;
+    font-size: 30px;
+}
+
+header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 15px;
+
+    h1 {
+        font-family: "OpenSans";
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .logo {
+        position: fixed;
+        right: 0;
+        z-index: 2;
+        margin-right: 15px;
+    }
+}
+
+nav {
+    font-family: "Montserrat-Medium";
+    font-size: 20px;
+    display: flex;
+    position: fixed;
+    transform: rotate(270deg);
+    right: -210px;
+    top: 500px;
+    z-index: 1;
+
+
+
+
+    :only-child {
+        margin: 0 20px 0 20px;
+    }
+
+    a {
+        &:hover {
+            text-shadow: 0 0 4px $secondary;
+            animation: navButtonAnim 0.6s ease-in-out both;
+
+        }
+        @keyframes navButtonAnim {
+            0% {
+                transform: rotate(0deg);
+            }
+    
+            100% {
+                transform: rotate(90deg);
+            }
+    
+    
+        }
+    }
+}
+
+.txtShadow {
+    text-shadow: 0 0 4px $secondary;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    padding: 20px 70px;
+
+    &__skeumorphism {
+        border: 1px solid #232725;
+        border-radius: 50px;
+
+        &--inset {
+            box-shadow: inset 3px 3px 20px 3px black;
+        }
+        &--insetWhite{
+            border: #a4a8a3;
+            background-color: #eff3ef;
+            box-shadow: inset 6px 6px 20px 15px #939992;
+            color: $primary;
+        }
+
+        &--outset {
+            box-shadow: 0 20px 20px 3px black;
+        }
+    }
+
+    &__engagement {
+        display: flex;
+        text-align: center;
+
+        @media only screen and (max-width: 768px) {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        :only-child {
+            margin: 25px;
+        }
+
+        
+    }
+    &__creation{
+        
+        color: $primary;
+        
+    }
+    i {
+        font-size: 50px;
+    }
+
+   
+
+}

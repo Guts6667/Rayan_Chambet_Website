@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/scss" href="./Style/style.scss" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./Style/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
     <title>Rayan Chambet - Web Developer</title>
   </head>
   <body>
@@ -15,44 +12,44 @@
     <header>
         <div>
             <div>
-                <p>Hi, I'm</p>
+                <p class="pBold">Hi, I'm</p>
             </div>
             <div>
-                <h1>Rayan Chambet</h1>
+                <h1 class="txtShadow">Rayan Chambet</h1>
             </div>
         </div>
-        <div>
-            <img src="./Assets/Button_light.png" alt="Spinnin Button Rayan Chambet">
+        <div class="logo" id="btnMenu">
+            <img src="./Assets/Button_light.png" alt="Spinnin Button Rayan Chambet" height="100px">
         </div>
     </header>
     <!-- Nav -->
-    <nav>
+    <nav class="navButtonAnim" id="menu">
         <div>
-            <a href=""></a>
+            <a href="#contact">Contact</a>
         </div>
         <div>
-            <a href=""></a>
+            <a href="#about">About me</a>
         </div>
         <div>
-            <a href=""></a>
+            <a href="#creation">Creation</a>
         </div>
         <div>
-            <a href=""></a>
+            <a href="#engagement">Engagement</a>
         </div>
     </nav>
     <!-- Animated Text -->
-    <div>
-        <img src="" alt="Web Developer animated text">
+    <div class="container">
+        <img src="./Assets/WebDeveloper.gif" alt="Web Developer animated text" >
     </div>
     <!-- Engagement -->
-    <section>
-        <div>
+    <section class="container container__skeumorphism container__skeumorphism--inset" id="engagement">
+        <div class="container__title">
             <h2>Engagement</h2>
         </div>
-        <div>
+        <div class="container__engagement">
             <div>
                 <div>
-                    <p></p>
+                    <p><i class="fas fa-search"></i></p>
                 </div>
                 <div>
                     <h3>SEO</h3>
@@ -63,7 +60,7 @@
             </div>
             <div>
                 <div>
-                    <p></p>
+                    <p><i class="fas fa-user-secret"></i></p>
                 </div>
                 <div>
                     <h3>Cyber Security</h3>
@@ -73,10 +70,10 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="container__engagement">
             <div>
                 <div>
-                    <p></p>
+                    <p><i class="fab fa-envira"></i></p>
                 </div>
                 <div>
                     <h3>Environment</h3>
@@ -87,7 +84,7 @@
             </div>
             <div>
                 <div>
-                    <p></p>
+                    <p><i class="fas fa-assistive-listening-systems"></i></p>
                 </div>
                 <div>
                     <h3>Accessibility</h3>
@@ -99,7 +96,7 @@
         </div>
     </section>
     <!-- Creation -->
-    <section>
+    <section class="container container__skeumorphism container__skeumorphism--insetWhite container__creation" id="creation">
         <div>
             <h2>Creation</h2>
         </div>
@@ -131,8 +128,8 @@
         </div>
     </section>
     <!-- Contact me -->
-    <section>
-        <div>
+    <section class="container">
+        <div id="contact">
             <h2>Contact me</h2>
         </div>
         <div>
@@ -165,7 +162,7 @@
         </div>
     </section>
     <!-- About me -->
-    <section>
+    <section id="about">
         <div>
             <h2>About me</h2>
         </div>
@@ -214,4 +211,5 @@
         </div>
     </footer>
   </body>
+  <script type="text/javascript" src="./script/script.js"></script>
 </html>
